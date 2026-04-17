@@ -5,6 +5,10 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 ## Skills
 
 - `nfs-dev-deploy`: Build `pryntu`, stage artifacts on NFS, bind-mount them on the camera, and restart services for fast iteration.
+- `local-package-overrides`: Create and manage Buildroot package source overrides with `scripts/manage-package-overrides.sh`.
+- `rtsp-stress-test`: Run reproducible RTSP UDP/TCP stress matrices and collect per-session logs.
+- `collect-diagnostics`: Gather and share Thingino diagnostics from Web UI, shell, or SD-card trigger.
+- `build-and-ota`: Use the standard Thingino build + OTA workflow safely for day-to-day firmware updates.
 
 ## Repository layout
 

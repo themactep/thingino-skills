@@ -18,10 +18,11 @@ Use this skill to gather support-ready diagnostics from a Thingino camera.
 1. Preferred UI path:
    - Open **Information -> Share Diagnostics Info** in Web UI.
 2. Shell method:
-   - `thingino-diag`
-   - This uploads report data and returns a share URL.
+   - Local temp file (default): `thingino-diag`
+   - Upload to server: `thingino-diag -u`
+   - Upload and return JSON link: `thingino-diag -j`
 3. Offline/file mode:
-   - `thingino-diag -l /path`
+   - `thingino-diag -o /path/file`
    - This writes a local diagnostics file.
 4. No shell access fallback:
    - Put an empty `.diag` file in the root of a blank SD card.
@@ -30,4 +31,4 @@ Use this skill to gather support-ready diagnostics from a Thingino camera.
 ## Notes
 
 - For RTSP-specific reliability investigations, pair this with `rtsp-stress-test`.
-
+- Legacy local-save flag `-l [path]` is still accepted, but prefer `-o`.

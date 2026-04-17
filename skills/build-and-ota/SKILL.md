@@ -21,13 +21,11 @@ Use this skill for the normal firmware build/deploy loop when developing or vali
 2. For package-only iteration:
    - `CAMERA=<camera_defconfig> make rebuild-<package>`
 3. Deploy over OTA:
-   - Safer day-to-day update (kernel+rootfs only): `CAMERA=<camera_defconfig> IP=<camera_ip> make update_ota`
-   - Full image including bootloader: `CAMERA=<camera_defconfig> IP=<camera_ip> make upgrade_ota`
+   - Full image including bootloader: `CAMERA=<camera_defconfig> IP=<camera_ip> make ota`
 4. Use debug-oriented serial build only when needed:
    - `CAMERA=<camera_defconfig> make dev`
 
 ## Notes
 
-- Prefer `update_ota` for regular updates; use `upgrade_ota` only when bootloader changes are intentional.
+- `ota` flashes the full firmware image, including bootloader. Keep power stable and network reliable during flashing.
 - If build errors are noisy, `make dev` is easier to read than parallel output.
-

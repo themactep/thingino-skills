@@ -11,6 +11,7 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 - `build-and-ota`: Use the standard Thingino build + OTA workflow safely for day-to-day firmware updates.
 - `add-streamer`: Add and correctly plumb a new streamer backend across Kconfig and build wiring.
 - `thingino-product-styling`: Apply Thingino-consistent visual styling for product pages and camera cards.
+- `device-smoke-cycle`: Build locally, stage to `/opt`, run a consumer (e.g. `S31raptor`) against the staged copy, collect dmesg/logread/logcat, then reboot.
 
 ## Repository layout
 

@@ -70,7 +70,7 @@ is explicitly hands-on.
 
 | Write | Not |
 |---|---|
-| thingino (lowercase, even in titles) | Thingino, ThingIno |
+| Thingino (a proper noun — capitalize in prose and titles) | THINGINO, ThingIno |
 | Buildroot, U-Boot, ONVIF, RTSP | buildroot, uboot, Onvif |
 | SoC, T31X, GC2053 (chip caps as vendors print them) | soc, t31x in prose (fine inside code/paths) |
 | defconfig, fragment, overlay, streamer | ad-hoc synonyms for established terms |
@@ -82,6 +82,9 @@ Link [thingino.com](https://thingino.com), the
 docs (`docs/<file>.md`) wherever they help; prefer linking a doc over
 re-explaining it at length.
 
+Lowercase "thingino" is the logo/wordmark styling, not a prose rule. In
+written text, treat the name like any proper noun: Thingino.
+
 ## Review checklist
 
 Before handing a draft over for publication:
@@ -91,7 +94,7 @@ Before handing a draft over for publication:
 2. Opening paragraph states a problem the reader has.
 3. No H1 in the body; sections start at `##`.
 4. `description` front matter is a plain-text sentence under 160 characters.
-5. Brand lowercase everywhere; terminology table respected.
+5. Brand and terminology table respected.
 6. Humor count per section ≤ 1; zero jokes inside technical content.
 7. Recap present; series links intact in both directions.
 8. Read it aloud once — anything you stumble on, the reader will too.
@@ -99,7 +102,8 @@ Before handing a draft over for publication:
 ## Notes
 
 - Reference article for tone and format: the blog's welcome post
-  (`articles/2025-01-15-welcome-to-the-thingino-blog.md`).
+  (`articles/2025-01-15-welcome-to-the-thingino-blog.md`). Note it predates
+  the branding rule above — don't imitate its lowercase "thingino" in prose.
 - Reference series for long-form structure: "The Thingino Developer's
   Journey" (parts 1–6, from first build to git worktrees).
 - Mechanics (filename, front matter, preview, scp deploy, slug pitfalls):

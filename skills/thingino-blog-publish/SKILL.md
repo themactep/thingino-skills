@@ -53,7 +53,8 @@ unknown, ask the user (commonly `~/www/thingino/blog`).
 ## Content style
 
 1. Match thingino voice: technical, concise, no marketing fluff.
-2. Brand is lowercase "thingino" in prose.
+2. Brand is "Thingino" in prose (a proper noun); lowercase "thingino"
+   is logo/wordmark styling only.
 3. Prefer concrete commands, tables and short paragraphs over prose walls.
 4. Link to https://thingino.com and the GitHub repo
    (https://github.com/themactep/thingino-firmware) where relevant.

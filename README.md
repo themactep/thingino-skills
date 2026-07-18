@@ -12,6 +12,7 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 - `add-streamer`: Add and correctly plumb a new streamer backend across Kconfig and build wiring.
 - `thingino-product-styling`: Apply Thingino-consistent visual styling for product pages and camera cards.
 - `device-smoke-cycle`: Build locally, stage to `/opt`, run a consumer (e.g. `S31raptor`) against the staged copy, collect dmesg/logread/logcat, then reboot.
+- `worktree-parallel-dev`: Run parallel tasks/agents in isolated git worktrees with correct buildroot submodule, patch, and dl-cache setup (`scripts/worktree.sh`).
 
 ## Repository layout
 

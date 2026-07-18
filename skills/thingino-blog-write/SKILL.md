@@ -54,11 +54,18 @@ is explicitly hands-on.
    comment the *why* inline when a command isn't self-evident.
 5. Tables for comparisons, references, and file inventories.
 6. Backticks for every path, command, variable, and config symbol in prose.
-7. **Go easy on emphasis.** Avoid italics — they render poorly in the blog
+7. **ASCII punctuation only.** Normal people cannot type typographic
+   characters on a keyboard, so source files stick to plain ASCII. Never
+   type literal em/en dashes (—, –): write `---` and `--` in prose — the
+   renderer (kramdown) converts them to proper dashes. Same for `...`
+   (becomes an ellipsis). Two places where no conversion happens: code
+   blocks (use a plain `-`) and front matter `description:` (plain hyphen,
+   it ships verbatim into meta tags).
+8. **Go easy on emphasis.** Avoid italics — they render poorly in the blog
    font and make the page look busy; let sentence structure carry the
    stress. Use **bold** sparingly: term introductions, warnings, and the
    lead-in of list items.
-8. **Close with a recap.** End substantial articles with a short
+9. **Close with a recap.** End substantial articles with a short
    "What you learned" bullet list. In a series, follow it with a one-line
    teaser for the next part.
 

@@ -13,6 +13,7 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 - `thingino-product-styling`: Apply Thingino-consistent visual styling for product pages and camera cards.
 - `device-smoke-cycle`: Build locally, stage to `/opt`, run a consumer (e.g. `S31raptor`) against the staged copy, collect dmesg/logread/logcat, then reboot.
 - `worktree-parallel-dev`: Run parallel tasks/agents in isolated git worktrees with correct buildroot submodule, patch, and dl-cache setup (`scripts/worktree.sh`).
+- `thingino-blog-publish`: Write, verify and publish Markdown articles to the thingino blog over scp (front matter, slugs, drafts, feeds).
 
 ## Repository layout
 

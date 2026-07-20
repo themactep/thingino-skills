@@ -117,16 +117,15 @@ Create a file `package/<name>/files/<name>.webui.json`:
            └── ...
    ```
 
-2. **Add dependency** in your `.mk` (must be conditional on webui being built):
+2. **Add dependency** and conditionally define web install commands.
+   The `INSTALL_WWW_CMDS` variable is only defined when the webui is
+   built, then referenced inside the main install define.  This avoids
+   `ifeq` inside a define block (which would be passed to the shell).
+
    ```make
    ifeq ($(BR2_PACKAGE_THINGINO_WEBUI),y)
    MYPLUGIN_DEPENDENCIES += thingino-webui
-   endif
-   ```
-
-3. **Install files** in your `INSTALL_TARGET_CMDS` (inside a `BR2_PACKAGE_THINGINO_WEBUI` conditional):
-   ```make
-   ifeq ($(BR2_PACKAGE_THINGINO_WEBUI),y)
+   define MYPLUGIN_INSTALL_WWW_CMDS
        $(INSTALL) -d $(TARGET_DIR)/var/www/a
        $(INSTALL) -d $(TARGET_DIR)/var/www/x
        $(INSTALL) -d $(TARGET_DIR)/var/www/a/plugins
@@ -138,7 +137,16 @@ Create a file `package/<name>/files/<name>.webui.json`:
            $(TARGET_DIR)/var/www/x/json-myplugin.cgi
        $(INSTALL) -D -m 0644 $(@D)/files/myplugin.webui.json \
            $(TARGET_DIR)/var/www/a/plugins/myplugin.webui.json
+   endef
    endif
+   ```
+
+3. **Reference it** inside your main install define:
+   ```make
+   define MYPLUGIN_INSTALL_TARGET_CMDS
+       # ... binary installs ...
+       $(MYPLUGIN_INSTALL_WWW_CMDS)
+   endef
    ```
 
    **Important:** Always add `$(INSTALL) -d` for `/var/www/a`, `/var/www/x`,

@@ -4,6 +4,7 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 
 ## Skills
 
+- `webui-plugin`: Create a WebUI plugin that adds pages, navigation items, scripts, and feature flags when an optional package is installed.
 - `nfs-dev-deploy`: Build `pryntu`, stage artifacts on NFS, bind-mount them on the camera, and restart services for fast iteration.
 - `local-package-overrides`: Create and manage Buildroot package source overrides with `scripts/manage-package-overrides.sh`.
 - `rtsp-stress-test`: Run reproducible RTSP UDP/TCP stress matrices and collect per-session logs.

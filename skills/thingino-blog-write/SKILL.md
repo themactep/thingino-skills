@@ -68,7 +68,13 @@ is explicitly hands-on.
    font and make the page look busy; let sentence structure carry the
    stress. Use **bold** sparingly: term introductions, warnings, and the
    lead-in of list items.
-9. **Close with a recap.** End substantial articles with a short
+9. **Images.** Prefer landscape (horizontal) orientation — portrait images
+   waste reading width and create awkward scrolling. Resize large images so
+   the width fits within a 600px limit; anything wider breaks the blog
+   layout on standard screens. Use `.webp` format for photos and
+   screenshots (lossy at ~80 % quality is a good default). When converting,
+   strip metadata (`-strip` in ImageMagick) for smaller files.
+10. **Close with a recap.** End substantial articles with a short
    "What you learned" bullet list. In a series, follow it with a one-line
    teaser for the next part.
 

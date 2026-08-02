@@ -49,6 +49,10 @@ unknown, ask the user (commonly `~/www/thingino/blog`).
    it under 160 characters, plain text.
 6. Optional fields: `date:` (overrides filename date), `slug:`
    (overrides filename slug), `draft: true` (hides article everywhere).
+7. Images are served from the `public/images/` directory (publicly
+   accessible). Place article images there and reference them as
+   `/images/filename.webp`. Prefer landscape `.webp` images at 600px
+   wide or less. See `thingino-blog-write` for full image guidelines.
 
 ## Content style
 

@@ -104,7 +104,7 @@ is explicitly hands-on.
 ## Series conventions
 
 - Number the parts; keep each part readable in one sitting.
-- Every part opens with `*Part N of [Series Name](...)* · [← Part N-1](...)`.
+- Every part opens with `*Part N of [Series Name](...)* / [<- Part N-1](...)`.
   Part 1 opens with `*Part 1 of [Series Name](...)*` (no back-link).
 - Every part ends with recap + "Next up" link.
 - Escalate difficulty across parts; each part should leave the reader with a

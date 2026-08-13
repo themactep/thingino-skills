@@ -7,15 +7,19 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 - `webui-plugin`: Create a WebUI plugin that adds pages, navigation items, scripts, and feature flags when an optional package is installed.
 - `nfs-dev-deploy`: Build `pryntu`, stage artifacts on NFS, bind-mount them on the camera, and restart services for fast iteration.
 - `local-package-overrides`: Create and manage Buildroot package source overrides with `scripts/manage-package-overrides.sh`.
+- `prudynt-dev`: Develop, debug, and deploy the prudynt streamer on Thingino cameras.
 - `rtsp-stress-test`: Run reproducible RTSP UDP/TCP stress matrices and collect per-session logs.
 - `collect-diagnostics`: Gather and share Thingino diagnostics from Web UI, shell, or SD-card trigger.
 - `build-and-ota`: Use the standard Thingino build + OTA workflow safely for day-to-day firmware updates.
 - `add-streamer`: Add and correctly plumb a new streamer backend across Kconfig and build wiring.
 - `thingino-product-styling`: Apply Thingino-consistent visual styling for product pages and camera cards.
+- `uboot-patch-workflow`: Create and apply follow-up U-Boot patches in thingino-firmware without modifying the large 0001 patch.
 - `device-smoke-cycle`: Build locally, stage to `/opt`, run a consumer (e.g. `S31raptor`) against the staged copy, collect dmesg/logread/logcat, then reboot.
 - `worktree-parallel-dev`: Run parallel tasks/agents in isolated git worktrees with correct buildroot submodule, patch, and dl-cache setup (`scripts/worktree.sh`).
 - `thingino-blog-publish`: Write, verify and publish Markdown articles to the thingino blog over scp (front matter, slugs, drafts, feeds).
+- `thingino-blog-review`: Review Thingino blog articles with the exacting eye of a salty 70's magazine editor-in-chief. For structural editing, voice policing, and cross-article consistency.
 - `thingino-blog-write`: Write and edit thingino blog articles in the established voice, structure, and terminology so the blog stays consistent.
+- `thingino-dev-persona`: Adopt the persona of an old-school embedded hardware engineer when working on Thingino firmware, drivers, kernel, or low-level hardware code. Biases toward minimalism, correctness, and data-driven decisions.
 
 ## Repository layout
 

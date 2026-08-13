@@ -1,6 +1,6 @@
 ---
 name: thingino-blog-publish
-description: Write and publish articles to the thingino blog (Markdown files served by a Sinatra app, deployed via scp).
+description: Write and publish articles to the thingino blog (Markdown files served by a Sinatra app, deployed via git push).
 license: MIT
 ---
 # thingino-blog-publish
@@ -23,9 +23,9 @@ unknown, ask the user (commonly `~/www/thingino/blog`).
 
 - One `.md` file = one article. No database, no admin UI, no restart —
   files take effect on the next HTTP request.
-- Production deploy is a plain file copy (scp) into the server's
-  `articles/` directory. If the production host/path is unknown, ask the
-  user; default suggested path is `/srv/thingino-blog/articles/`.
+- Publishing means committing the article to the blog repo and pushing
+  to the remote. The server pulls from the repo --- no scp, no manual
+  file copy. The blog app root is a git working copy.
 
 ## Article rules
 
@@ -75,14 +75,13 @@ unknown, ask the user (commonly `~/www/thingino/blog`).
    - Check rendered HTML for the title, date and body:
      `curl -s http://127.0.0.1:4567/<slug> | grep -E '<h1|<time'`
    - Stop the server afterwards (kill by port, see pitfalls).
-3. Publish to production (after user confirms host and final text):
-   - `scp articles/YYYY-MM-DD-slug.md <user>@<host>:<articles-dir>/`
-   - Do not use `scp -p` (preserved mtime can defeat the cache).
-4. Verify production:
-   - `curl -sI https://<blog-host>/<slug> | head -1` → `200`
-   - `curl -s https://<blog-host>/atom.xml | grep <slug>` → present
-5. Updates: edit the same file and re-upload. Unpublish: delete the
-   remote file or re-upload with `draft: true`.
+3. Publish (after user confirms final text):
+   - Ensure the article has no `draft: true` flag (remove it if present).
+   - Commit and push:
+     `cd <blog-app-root> && git add articles/YYYY-MM-DD-slug.md && git commit -m "..." && git push`
+   - The user pulls on the server to make it live.
+4. Updates: edit the same file, commit, push. Unpublish: add
+   `draft: true` to the front matter, commit, push.
 
 ## Pitfalls
 
@@ -96,5 +95,5 @@ unknown, ask the user (commonly `~/www/thingino/blog`).
 4. When killing a local test server, kill by port
    (`ss -ltnp | grep 4567`), not `pkill -f rackup` — the `-f` pattern
    can match your own shell.
-5. scp uploads land with the file owner's permissions; the file must be
-   readable by the service user (`chmod 644` if in doubt).
+5. After pushing, the article is live once the user pulls on the server.
+   No further action is needed from the agent.

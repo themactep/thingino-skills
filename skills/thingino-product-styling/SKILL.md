@@ -44,6 +44,29 @@ Use this skill when creating or refining UI for Thingino-related products, catal
 3. Avoid noisy visual effects:
    - No heavy gradients, glassmorphism, or dense shadows unless required.
 
+## Chart pattern (Chart.js)
+
+For time-series charts in camera-facing pages (e.g. ISP Inspector, Sensor Data
+Collector), keep one visual language:
+
+1. Lines:
+   - Data series: `borderWidth: 2`, solid (no `borderDash`).
+   - Reference/threshold lines: `borderWidth: 1`, solid, `tension: 0`.
+   - `tension: 0.4` on data series for smooth curves.
+   - `fill: false` — no area fills.
+   - Keep few series per chart so colors alone distinguish them.
+2. Points:
+   - `pointRadius: 1`.
+   - `pointBackgroundColor` and `pointBorderColor` set to the line color;
+     `pointBorderWidth: 1`.
+   - Reference lines: `pointRadius: 0`, `pointHoverRadius: 0`.
+3. Hover / tooltip:
+   - `interaction: { mode: "index", intersect: false }` — one tooltip at the
+     hovered x index listing every series value.
+   - Hide the legend (`legend: { display: false }`) when the tooltip already
+     names each series.
+   - Use Chart.js default tooltips; no custom HTML tooltips.
+
 ## Do / Don't
 
 1. Do:
@@ -62,3 +85,5 @@ Use this skill when creating or refining UI for Thingino-related products, catal
 3. Build responsive product cards with centered images and hardware tuples.
 4. Validate active/hover/button states use Thingino accent language.
 5. Ensure technical text remains legible and compact on mobile.
+6. Charts follow the Chart pattern: 2px solid data lines, 1px reference lines,
+   index-mode tooltip, legend hidden when tooltips name each series.

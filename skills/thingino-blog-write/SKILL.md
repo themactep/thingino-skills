@@ -48,6 +48,24 @@ about what the words say; that one is about how they ship.
 8. **Strong sentence spines.** Avoid "X is what let Y happen" or
    "Fixing X is what made Y possible." Prefer the active verb directly:
    "With X fixed, Y ran" instead of "Fixing X is what let Y run."
+9. **Explain why, not just what.** Narrative carries reasoning: where the
+   fix came from, why it was needed, why structural rather than another
+   patch. If a section reads like a briefing of facts ("The fix collapsed
+   five writers into one gate"), its why is missing. Flow like a river,
+   not a wartime report.
+10. **No telegraphic fragments.** Prose is not a column. "First check: the
+    clock." becomes "The first thing to check was the clock." Stacked short
+    declaratives ("`ntpd` held the clock. DHCP pushed a timezone. ONVIF
+    pushed the clock.") become one sentence with clauses.
+11. **One metaphor, held for the whole piece.** If the fix is a gate, it
+    stays a gate — not a door a paragraph later. Mixed metaphors read as
+    sloppy.
+12. **A header never splits a beat.** When a section builds to a question
+    and its one-line answer, the header goes after the answer, not between
+    the two. A header between a setup and its punch line kills the punch
+    line.
+13. **No worn-out phrases.** "Smoking gun" and other AI favorites are dead.
+    Reach for the specific: "The clue was in the log."
 
 ## Audience
 
@@ -168,6 +186,13 @@ Before handing a draft over for publication:
     Any match is a non-ASCII character — replace it.
 12. `title:` front matter is not wrapped in quotes.
 13. Read it aloud once — anything you stumble on, the reader will too.
+14. Every major turn explains why, not just what — the reasoning is on the
+    page, not implied.
+15. No telegraphic fragments or stacked "X did Y" columns.
+16. One metaphor held consistently throughout (no gate/door drift).
+17. No header splits a question from its answer.
+18. No worn-out AI phrases ("smoking gun" and friends).
+19. No repeated construction — a phrase used three times is a tic; vary it.
 
 ## Notes
 

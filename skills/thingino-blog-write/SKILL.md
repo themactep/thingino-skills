@@ -137,6 +137,10 @@ is explicitly hands-on.
   it as plain text. `title: My Article`, not `title: "My Article"`.
 - `description:` is plain text under 160 characters. No Markdown, no HTML,
   no quotes. It ships verbatim into `<meta>` tags and feed summaries.
+- `author:` is required. It is the byline on the article. Use the author's
+  real name where known (`Paul Philippov`, `CaptainRon`), or `Thingino team`
+  for unattributed posts. A handle is fine when that is how the author is
+  known and wishes to stay pseudonymous.
 - `draft: true` hides the article from the index, feeds, sitemap, and direct
   URL. Use it for anything not approved for immediate publication.
 
@@ -171,28 +175,30 @@ Before handing a draft over for publication:
 3. No H1 in the body; sections start at `##`.
 4. `description` front matter is a plain-text sentence under 160 characters.
    No quotes, no Markdown.
-5. Brand and terminology table respected.
-6. Humor count per section ≤ 1; zero jokes inside technical content.
-7. Recap present with ≤ 5 generalizable bullets. Series links intact in
+5. `author:` front matter present, with a real name, a pseudonymous handle,
+   or `Thingino team`.
+6. Brand and terminology table respected.
+7. Humor count per section ≤ 1; zero jokes inside technical content.
+8. Recap present with ≤ 5 generalizable bullets. Series links intact in
    both directions, verified against published slugs.
-8. No self-references ("as stated above", "more on that below", "from
+9. No self-references ("as stated above", "more on that below", "from
    earlier in this article").
-9. No filler words: "simply", "just", "obviously", "actually", "in fact",
-   "of course".
-10. No editorializing confirmation sentences ("This confirmed the match",
+10. No filler words: "simply", "just", "obviously", "actually", "in fact",
+    "of course".
+11. No editorializing confirmation sentences ("This confirmed the match",
     "This is a real difference"). If the data already made the point,
     trust it.
-11. ASCII only. Run `grep -Pn '[^\x00-\x7F]' articles/your-file.md`.
+12. ASCII only. Run `grep -Pn '[^\x00-\x7F]' articles/your-file.md`.
     Any match is a non-ASCII character — replace it.
-12. `title:` front matter is not wrapped in quotes.
-13. Read it aloud once — anything you stumble on, the reader will too.
-14. Every major turn explains why, not just what — the reasoning is on the
+13. `title:` front matter is not wrapped in quotes.
+14. Read it aloud once — anything you stumble on, the reader will too.
+15. Every major turn explains why, not just what — the reasoning is on the
     page, not implied.
-15. No telegraphic fragments or stacked "X did Y" columns.
-16. One metaphor held consistently throughout (no gate/door drift).
-17. No header splits a question from its answer.
-18. No worn-out AI phrases ("smoking gun" and friends).
-19. No repeated construction — a phrase used three times is a tic; vary it.
+16. No telegraphic fragments or stacked "X did Y" columns.
+17. One metaphor held consistently throughout (no gate/door drift).
+18. No header splits a question from its answer.
+19. No worn-out AI phrases ("smoking gun" and friends).
+20. No repeated construction — a phrase used three times is a tic; vary it.
 
 ## Notes
 

@@ -154,8 +154,8 @@ Check:
 Every review ends with a clear, scannable summary:
 
 - **Hard bugs** — things that must be fixed before publication
-  (description over length, broken front matter, wrong brand, missing
-  attribution, factual error).
+  (description over length, broken front matter, missing or wrong
+  `author:` byline, wrong brand, missing attribution, factual error).
 - **Structural issues** — things that require reorganizing the piece
   (wrong organizing principle, section size mismatch, missing or
   misleading opening, ending that doesn't land).
@@ -212,7 +212,9 @@ cheerleading, no apologies. Just what the author should do next.
 - Defer all mechanical style checks (branding, front matter format, ASCII
   punctuation, backtick rules, image specs) to `thingino-blog-write`. If
   you spot a mechanical issue during your read, flag it under "Hard bugs"
-  but don't belabor it — that skill owns the checklist.
+  but don't belabor it — that skill owns the checklist. The required
+  front-matter fields are `title:`, `description:`, and `author:`; a
+  missing `author:` byline is a hard bug, not a stylistic choice.
 - If asked to review an article that is already published, note that and
   adjust tone accordingly (still honest, but frame changes as "next time"
   or "if you revise" rather than demands).

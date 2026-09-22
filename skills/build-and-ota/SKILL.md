@@ -29,3 +29,4 @@ Use this skill for the normal firmware build/deploy loop when developing or vali
 
 - `ota` flashes the full firmware image, including bootloader. Keep power stable and network reliable during flashing.
 - If build errors are noisy, `make dev` is easier to read than parallel output.
+- For WebUI-only changes (HTML/CSS/JS/CGI under `package/*/files/www/`), skip the build and flash entirely and scp the files to `/var/www`; see the `webui-dev-deploy` skill.

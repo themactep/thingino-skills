@@ -13,6 +13,7 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 - `build-and-ota`: Use the standard Thingino build + OTA workflow safely for day-to-day firmware updates.
 - `webui-dev-deploy`: Deploy WebUI HTML/CSS/JS/CGI files straight to `/var/www` without a rebuild or flash.
 - `add-streamer`: Add and correctly plumb a new streamer backend across Kconfig and build wiring.
+- `open-sensor-drivers`: Port and debug T31 open-ISP mainline V4L2 sensors, including the per-sensor AE gain LUT and DT/camera wiring.
 - `thingino-product-styling`: Apply Thingino-consistent visual styling for product pages and camera cards.
 - `uboot-patch-workflow`: Create and apply follow-up U-Boot patches in thingino-firmware without modifying the large 0001 patch.
 - `device-smoke-cycle`: Build locally, stage to `/opt`, run a consumer (e.g. `S31raptor`) against the staged copy, collect dmesg/logread/logcat, then reboot.

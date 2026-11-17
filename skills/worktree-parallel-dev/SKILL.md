@@ -35,9 +35,14 @@ Model: **one task, one branch, one worktree, one agent.**
 4. Protect a worktree during long builds:
    - `git worktree lock <path> --reason "build running"` / `git worktree unlock <path>`
 5. Cleanup after the PR merges (from the main checkout, user-confirmed):
+   - Merge with `gh pr merge --merge --delete-branch` (or the repo's merge
+     method) so the remote head branch is deleted with the merge.
    - `scripts/worktree.sh remove <branch>` — deletes the directory (incl. its
      `output/`), preserves the branch. Never remove a worktree unless the user
      asked for it or approved it.
+   - Delete the merged branch: `git branch -D <branch>`; if the merge did not
+     already remove it, `git push origin --delete <branch>`. Do not leave a
+     merged branch or its worktree behind.
 
 ## Hard rules for agents
 

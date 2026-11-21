@@ -13,6 +13,15 @@ Use this skill for the normal firmware build/deploy loop when developing or vali
 - You need to deploy to a running camera over the network.
 - You want clear guidance on safe OTA target selection.
 
+## Pre-flight: check the user inputs
+
+Read the `=== User Build Inputs ===` banner the build prints. If
+`THINGINO_USER_DIR` points inside a worktree (or at `/dev/null`) and no
+`overlay`, JSON, or fragment files are listed, the image has no WiFi
+credentials, camera passwords, streamer settings, or third-party accounts: it
+boots into the portal/direct-connect AP and never joins the LAN. Never OTA such
+an image. See `worktree-parallel-dev` for how to provide the user tree.
+
 ## Workflow
 
 1. Select camera profile and run build:

@@ -22,6 +22,7 @@ Thingino-specific Copilot skills for firmware development and deployment workflo
 - `thingino-blog-review`: Review Thingino blog articles with the exacting eye of a salty 70's magazine editor-in-chief. For structural editing, voice policing, and cross-article consistency.
 - `thingino-blog-write`: Write and edit thingino blog articles in the established voice, structure, and terminology so the blog stays consistent.
 - `thingino-dev-persona`: Adopt the persona of an old-school embedded hardware engineer when working on Thingino firmware, drivers, kernel, or low-level hardware code. Biases toward minimalism, correctness, and data-driven decisions.
+- `agent-cooperation`: Coordinate with other LLM agents on Thingino work: agent-to-agent review format, verifying peer claims, parallel worktree rules, and handoff requirements. Peer agents include Gino (`WLTB-Gino`).
 
 ## Repository layout
 
